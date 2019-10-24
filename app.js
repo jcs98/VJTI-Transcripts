@@ -17,7 +17,7 @@ window.addEventListener('load', async () => {
 
     const abi = [{ "constant": false, "inputs": [{ "internalType": "string", "name": "_studentId", "type": "string" }, { "internalType": "string", "name": "_CPI", "type": "string" }], "name": "addTranscript", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "owner", "outputs": [{ "internalType": "address payable", "name": "", "type": "address" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [{ "internalType": "string", "name": "_studentId", "type": "string" }, { "internalType": "string", "name": "_CPI", "type": "string" }], "name": "verifyTranscript", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "payable": false, "stateMutability": "view", "type": "function" }, { "inputs": [], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }];
 
-    const address = "0x14a6b49F7e3c04503A7b31DA4Abb4808c4d5E1Ac";
+    const address = "";
 
     transcriptsContract = new web3.eth.Contract(abi, address);
 });
@@ -34,10 +34,12 @@ function add() {
         console.log("Adding", studentId, cpi);
 
         transcriptsContract.methods.addTranscript(studentId, cpi).send({ from: account }, function (err, res) {
-            if (err)
+            if (err) {
                 console.log(err);
+                alert("Permission Denied");
+            }
             else
-                alert("Recocord added Successfully !!");
+                alert("Record added Successfully !!");
         })
 
     });

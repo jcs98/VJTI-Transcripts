@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 contract Transcripts {
     address payable public owner;
-    // mapping from student id to cpi
+    // mapping from student id hash to cpi hash
     mapping(bytes32 => bytes32) private transcripts;
     
     constructor() public {
