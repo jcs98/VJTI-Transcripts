@@ -57,7 +57,7 @@ window.addEventListener("load", async () => {
     },
   ];
 
-  const address = "";
+  const address = "0x861A4fb9A58dF9a1958040502199AE800F04772e";
 
   transcriptsContract = new web3.eth.Contract(abi, address);
 });
