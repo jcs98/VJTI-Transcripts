@@ -19,8 +19,16 @@ window.addEventListener("load", async () => {
     {
       constant: false,
       inputs: [
-        { internalType: "string", name: "_studentId", type: "string" },
-        { internalType: "string", name: "_CPI", type: "string" },
+        {
+          internalType: "string",
+          name: "_studentId",
+          type: "string",
+        },
+        {
+          internalType: "string",
+          name: "_CPI",
+          type: "string",
+        },
       ],
       name: "addTranscript",
       outputs: [],
@@ -29,10 +37,22 @@ window.addEventListener("load", async () => {
       type: "function",
     },
     {
+      inputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor",
+    },
+    {
       constant: true,
       inputs: [],
       name: "owner",
-      outputs: [{ internalType: "address payable", name: "", type: "address" }],
+      outputs: [
+        {
+          internalType: "address payable",
+          name: "",
+          type: "address",
+        },
+      ],
       payable: false,
       stateMutability: "view",
       type: "function",
@@ -40,20 +60,28 @@ window.addEventListener("load", async () => {
     {
       constant: true,
       inputs: [
-        { internalType: "string", name: "_studentId", type: "string" },
-        { internalType: "string", name: "_CPI", type: "string" },
+        {
+          internalType: "string",
+          name: "_studentId",
+          type: "string",
+        },
+        {
+          internalType: "string",
+          name: "_CPI",
+          type: "string",
+        },
       ],
       name: "verifyTranscript",
-      outputs: [{ internalType: "bool", name: "", type: "bool" }],
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
       payable: false,
       stateMutability: "view",
       type: "function",
-    },
-    {
-      inputs: [],
-      payable: false,
-      stateMutability: "nonpayable",
-      type: "constructor",
     },
   ];
 
